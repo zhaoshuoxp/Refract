@@ -21,6 +21,18 @@ Refract lets you keep working on projects that colleagues made in GraphPad Prism
 - **Checked against Prism:** every analysis is compared value for value with Prism 11.1 on generated data sets; the few known differences (for example random simulations) are listed in [docs/format/findings.md](docs/format/findings.md).
 - **Light and dark:** the app and its icon follow the system theme.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/images/screenshot-graph-light.png" width="860" alt="A grouped bar graph being edited in Refract">
+</p>
+
+| Data table | Results | Dark mode |
+|---|---|---|
+| <img src="docs/images/screenshot-table-light.png" width="280" alt="Data table"> | <img src="docs/images/screenshot-results-light.png" width="280" alt="One-way ANOVA results"> | <img src="docs/images/screenshot-graph-column-dark.png" width="280" alt="Column graph with significance brackets in dark mode"> |
+
+All screenshots use Refract's built-in sample tables.
+
 ## Compared with Prism
 
 Refract covers the everyday work of a Prism project: entering data, the common analyses and graphs, editing them, and exchanging files. It does not try to be a copy of Prism, and some of Prism's features are not there yet.
@@ -37,6 +49,38 @@ Refract covers the everyday work of a Prism project: entering data, the common a
 | Opens `.prism` / `.pzfx` | Yes / Yes | Yes / Yes |
 | Saves `.prism` / `.pzfx` | Yes / Yes | Yes / data-table edits only |
 | Scripting | Prism scripts | Command line (`python -m refract`) |
+
+## Graphs side by side
+
+Refract's sample tables, saved by Refract and drawn by Prism 11.1 (left of each pair) and by Refract (right), here with the Misty Blue and Peach colour scheme:
+
+<p align="center"><img src="docs/images/compare-prism.png" width="900" alt="The same graphs drawn by Prism and by Refract"></p>
+
+## Statistics checked against Prism
+
+Every analysis was created in documents of generated data, computed by Prism 11.1 itself, and compared with Refract result by result. "Equal" means equal to about 1e-9 relative or better.
+
+| Analyses | How they were checked | Result |
+|---|---|---|
+| Descriptive statistics, t tests and their nonparametric versions (7 designs) | 60 generated data pairs | 112 result fields equal; Prism's exact Kolmogorov-Smirnov P differs in one rare case (a rounding quirk in Prism) |
+| One-sample tests, normality tests (Shapiro-Wilk, D'Agostino-Pearson, Anderson-Darling, K-S) | 6 tables x 13 sample sizes x 7 settings | 2,699 fields equal |
+| One-way ANOVA, Brown-Forsythe and Welch, Kruskal-Wallis, Friedman, repeated measures, multiple comparisons (Tukey, Dunnett, Sidak, Holm, Dunn, FDR...) | 20 data sets x 19 settings | 3,300+ fields equal |
+| Two-way ANOVA (ordinary and repeated measures), simple effects | generated tables, 17 post-test settings | all equal (1,649 post-test fields) |
+| Repeated measures with missing values (mixed model) | 6 one-way and 5 two-way patterns | equal, except Dunnett's test after a one-way mixed fit (about 3 % on P) |
+| Three-way ANOVA | 7 cases, unbalanced and with missing values | all values equal |
+| Multiple t tests, frequency distributions, outliers (ROUT, Grubbs), Bland-Altman | generated tables | all compared fields equal |
+| Correlation, linear regression, contingency tables (Fisher, chi-square, relative risk, odds ratio) | 18 XY and 16 contingency tables | all equal |
+| Nonlinear regression (curve fits, profile-likelihood CIs, model comparison, ROUT) | 14 data sets x 4 settings | equal; a few fits differ in the 6th digit because Prism stops at its "medium" convergence (Refract's sum of squares is lower or equal) |
+| Survival (Kaplan-Meier, log-rank, Gehan-Breslow-Wilcoxon, hazard ratios) | 16 tables with 2-4 groups and tied times | all fields equal |
+| Simple and multiple logistic regression, multiple linear regression, Cox regression | 10 tables each | equal; the SE of the ROC area of logistic regression is not reproduced |
+| ROC curves, area under the curve, nested t test, nested one-way ANOVA | generated tables | equal |
+| PCA | generated tables | equal, except the sign of components 2 onwards and parallel analysis (random simulation) |
+| Hierarchical clustering | Prism's own sample files | every merge, cluster and distance equal (10,000+ cells) |
+| K-means clustering | Prism's own sample file | Prism uses one random start, so its clusters are not reproduced; on Prism's clusters, 16 of 17 quality indices are equal (Krzanowski-Lai is not) |
+| Splines (cubic, Akima, smoothing), LOWESS, smoothing and derivatives | 38 smoothing-spline curves and other generated curves | equal |
+| Data manipulations (transform, normalize, remove baseline, fraction of total, prune rows, transpose, select and transform, extract and rearrange) | generated tables | every cell equal |
+
+[docs/format/findings.md](docs/format/findings.md) has the rules found for each analysis and the full list of known differences.
 
 ## Compatibility with Prism files
 
