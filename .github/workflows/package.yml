@@ -1,0 +1,50 @@
+# Build the installable packages (PLAN phase 7) and run each one's self-test:
+# the macOS arm64 disk image (there is no Intel build), and on request the
+# Windows x64 installer, which waits until the macOS release is done. Unsigned
+# unless the signing secrets are set (see tools/packaging/build_macos.sh,
+# build_windows.ps1). Run by hand (Actions > package > Run workflow) or on a
+# version tag.
+name: package
+
+on:
+  workflow_dispatch:
+    inputs:
+      windows:
+        description: "Also build the Windows installer (not yet released)"
+        type: boolean
+        default: false
+  push:
+    tags: ["v*"]
+
+jobs:
+  macos:
+    runs-on: macos-14   # Apple silicon
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Build, self-test and make the disk image
+        env:
+          REFRACT_TARGET_ARCH: arm64
+          REFRACT_BUILD_DIR: ${{ runner.temp }}/refract-build
+        run: tools/packaging/build_macos.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refract-macos-arm64
+          path: dist/*.dmg
+
+  windows:
+    if: ${{ inputs.windows }}
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inno Setup
+        run: choco install innosetup -y --no-progress
+      - name: Build, self-test and make the installer
+        run: powershell -ExecutionPolicy Bypass -File tools\packaging\build_windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refract-windows-x64
+          path: dist/*.exe

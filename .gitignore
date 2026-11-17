@@ -1,0 +1,15 @@
+# Real Prism documents and anything derived from them: never commit
+corpus/
+*.prism
+*.prismt
+*.pzfx
+*.pzf
+*.pzt
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+.venv-build/
+.DS_Store

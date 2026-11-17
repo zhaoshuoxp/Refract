@@ -1,0 +1,1716 @@
+{
+ "AREA_UNDER_CURVE": {
+  "calc": {
+   "baseline": {
+    "useSpecificValue": true,
+    "value": 0.0,
+    "firstRowsMeanCount": 1,
+    "lastRowsMeanCount": 0
+   },
+   "peak": {
+    "height": {
+     "definePeakByAmplitudePercentage": true,
+     "minimumAmplitudePercentage": 10.0,
+     "minimumYUnitCount": 0.0
+    },
+    "width": {
+     "ignoreNarrowPeak": false,
+     "adjacentPointCount": 2
+    },
+    "calcPositivePeaksOnly": true
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "BLAND_ALTMAN": {
+  "calc": {
+   "type": "A_MINUS_B"
+  },
+  "graph": {
+   "create": true
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "CHI2": {
+  "data": {
+   "datasetID": {
+    "col": {
+     "idx": 0
+    }
+   },
+   "expectedValuesType": "COUNTS"
+  },
+  "calc": {
+   "test": "CHI_SQUARE_TEST",
+   "ciMethod": "CI_PROPORTION_METHOD_WILSON_BROWN",
+   "outcomes": []
+  },
+  "options": {
+   "pValueTailType": "P_VALUE_TWO_TAILED"
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "COLUMN_STATISTICS": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "descriptiveStatistics": {
+    "sum": false,
+    "mean": true,
+    "meanCI": false,
+    "coefficientOfVariation": false,
+    "skewnessAndKurtosis": false,
+    "minMaxRange": true,
+    "median": true,
+    "medianCI": false,
+    "percentiles": false,
+    "geometricMean": false,
+    "geometricMeanCI": false
+   },
+   "normalityTests": {
+    "dAgostinoPearson": false,
+    "shaproWilks": false,
+    "kolmogorovSmirnov": false
+   },
+   "oneSampleTests": {
+    "parametric": false,
+    "nonparametric": false,
+    "hypotheticalValue": 0.0,
+    "usePrattMethod": false
+   }
+  },
+  "options": {
+   "confidenceLevel": 95.0,
+   "percentileLevel": 90.0
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "CONTINGENCY_TABLE": {
+  "calc": {
+   "method": "FISHER_EXACT_TEST",
+   "relativeRisk": {
+    "calculate": false,
+    "ciMethod": "CI_RELATIVE_RISK_METHOD_KOOPMAN"
+   },
+   "differenceBetweenProportions": {
+    "calculate": false,
+    "ciMethod": "CI_PROPORTIONS_DIFFERENCE_METHOD_NEWCOMBE_WILSON_CC"
+   },
+   "oddsRatio": {
+    "calculate": false,
+    "ciMethod": "CI_ODDS_RATIO_METHOD_BAPTISTA_PIKE"
+   },
+   "proportions": {
+    "calculate": false,
+    "ciMethod": "CI_PROPORTION_METHOD_WILSON_BROWN"
+   },
+   "associationMeasures": {
+    "calculate": false,
+    "ciMethod": "CI_ASSOCIATION_MEASURE_CRAMERS_V_ANALYTICAL_CHI_SQUARE_METHOD"
+   }
+  },
+  "options": {
+   "pValueTailType": "P_VALUE_TWO_TAILED",
+   "significanceLevel": 0.05
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "CORRELATION": {
+  "experimentalDesign": "PARAMETRIC",
+  "pairwiseDesign": {
+   "type": "CONTROL_VS_ALL",
+   "controlID": {
+    "col": {
+     "idx": -1
+    }
+   },
+   "selectedPairID": [
+    {
+     "col": {
+      "idx": -1
+     }
+    },
+    {
+     "col": {
+      "idx": 0
+     }
+    }
+   ]
+  },
+  "graph": {
+   "heatMap": true
+  },
+  "options": {
+   "excludeIncompleteRows": false,
+   "pValueTailType": "P_VALUE_TWO_TAILED",
+   "confidenceLevel": 95.0
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "DEMING_REGRESSION": {
+  "data": {
+   "handleReplicatesAs": "INDIVIDUAL"
+  },
+  "model": {
+   "sdType": "EQUAL_SD",
+   "xSD": 1.0,
+   "ySD": 1.0
+  },
+  "calc": {
+   "yCI": {
+    "enabled": true,
+    "x": 0.0
+   },
+   "interpolation": false,
+   "modelComparisonTest": false,
+   "departureFromLinearityTest": false
+  },
+  "graph": {
+   "regressionLineRange": {
+    "minX": {
+     "isAuto": true,
+     "value": 0.0
+    },
+    "maxX": {
+     "isAuto": true,
+     "value": 24.0
+    }
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "DESCRIPTIVE_STATISTICS": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "sum": false,
+   "mean": true,
+   "meanCI": false,
+   "coefficientOfVariation": false,
+   "skewnessAndKurtosis": false,
+   "minMaxRange": true,
+   "median": false,
+   "medianCI": false,
+   "percentiles": false,
+   "geometricMean": false,
+   "geometricMeanCI": false,
+   "harmonicMean": false,
+   "harmonicMeanCI": false,
+   "quadraticMean": false,
+   "quadraticMeanCI": false
+  },
+  "options": {
+   "confidenceLevel": 95.0,
+   "percentileLevel": 90.0
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "EXTRACT_REARRANGE": {
+  "resultTableFormat": "GROUPED",
+  "includeVarNamePrefix": false,
+  "reportCompleteRowsOnly": false,
+  "rowTitles": {
+   "type": "NO",
+   "variable": null
+  }
+ },
+ "FIT_SPLINE_LOWESS": {
+  "calc": {
+   "curve": {
+    "type": "SMOOTHING_SPLINE",
+    "knotCount": 4,
+    "resolution": "MEDIUM",
+    "segmentCount": 12
+   },
+   "interpolateUnknowns": false
+  },
+  "graph": {
+   "residuals": false
+  }
+ },
+ "FRACTION_OF_TOTAL": {
+  "calc": {
+   "type": "COLUMN",
+   "ci": {
+    "calculate": false,
+    "method": "WILSON_BROWN",
+    "level": 95.0
+   }
+  },
+  "options": {
+   "reportResultsAs": "FRACTIONS"
+  }
+ },
+ "FREQUENCY_DISTRIBUTION": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "distributionType": "FREQUENCY",
+   "tabulate": "VALUE_COUNT",
+   "binWidth": {
+    "type": "AUTO_BINS",
+    "value": 5000.0,
+    "autoValue": 5000.0
+   },
+   "binCenterFirst": {
+    "isAuto": true,
+    "value": 0.0,
+    "autoValue": 0.0
+   },
+   "binCenterLast": {
+    "isAuto": true,
+    "value": 100000.0,
+    "autoValue": 100000.0
+   }
+  },
+  "graph": {
+   "create": true,
+   "graphType": "BAR",
+   "yAxisScale": "LINEAR"
+  }
+ },
+ "HIERARCHICAL_CLUSTERING": {
+  "calc": {
+   "columnTransform": "STANDARDIZE",
+   "rowTransform": "NONE",
+   "distance": {
+    "type": "EUCLIDIAN",
+    "value": 2.0
+   },
+   "linkage": "GROUP_AVERAGE"
+  },
+  "defineClusters": {
+   "rows": {
+    "method": "NUMBER_OF_CLUSTERS",
+    "clusterCount": 5,
+    "cutoffHeight": 1.0
+   },
+   "columns": {
+    "method": "NONE",
+    "clusterCount": 2,
+    "cutoffHeight": 1.0
+   }
+  },
+  "report": {
+   "standardizedData": false,
+   "distanceMatrix": true,
+   "mergeMap": true,
+   "copheneticDistanceMatrix": true,
+   "copheneticCorrelation": true,
+   "outputFullMatrix": true
+  },
+  "graph": {
+   "plots": [
+    "DENDROGRAM",
+    "HEATMAP",
+    "ELBOW_PLOT"
+   ]
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "IDENTIFY_OUTLIERS": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "method": "GRUBBS_SINGLE",
+   "q": 1.0,
+   "alpha": 0.0001
+  }
+ },
+ "INTERPOLATION": {
+  "method": {
+   "outliers": {
+    "method": "DO_NOT_HANDLE",
+    "q": 1.0
+   },
+   "fittingMethod": "LS",
+   "weighting": {
+    "type": "NO_WEIGHTING"
+   }
+  },
+  "interpolation": {
+   "enabled": true,
+   "calcCI": false,
+   "confidenceLevel": 95.0
+  },
+  "graph": {
+   "curveBands": {
+    "type": "CONFIDENCE",
+    "level": 95.0
+   }
+  },
+  "diagnostics": {
+   "runsTest": true,
+   "replicatesTest": false
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "K_MEANS_CLUSTERING": {
+  "calc": {
+   "transform": "STANDARDIZE",
+   "distance": {
+    "type": "EUCLIDIAN",
+    "value": 2.0
+   },
+   "clusterCount": {
+    "min": 1,
+    "max": 8
+   },
+   "algorithm": "HARTIGAN_WONG",
+   "maxIterCount": 10,
+   "randomSeed": {
+    "type": "AUTO",
+    "value": 53273
+   },
+   "clusterMetrics": true
+  },
+  "report": {
+   "anovaTable": false,
+   "clusterDetails": true,
+   "distances": false,
+   "initialCentroids": false,
+   "transformedData": true
+  },
+  "graph": {
+   "elbowPlot": true,
+   "silhouettePlot": true,
+   "gapPlot": true
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "MULTIPLE_COMPARISONS": {
+  "multipleComparisons": {
+   "type": "FDR",
+   "statistical": {
+    "test": "HOLM_SIDAK",
+    "report": {
+     "adjustedPValues": true
+    },
+    "options": {
+     "significanceLevel": 0.05
+    }
+   },
+   "fdr": {
+    "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+    "options": {
+     "discoveryLevel": 1.0
+    }
+   },
+   "noCorrection": {
+    "options": {
+     "significanceLevel": 0.05
+    }
+   }
+  },
+  "graph": {
+   "rankedPValues": false
+  }
+ },
+ "MULTIPLE_COX_REGRESSION": {
+  "modelComparison": {
+   "method": "NO",
+   "alpha": 0.05
+  },
+  "interpolation": {
+   "fromData": true,
+   "fromList": false,
+   "calcCI": false,
+   "pointsList": []
+  },
+  "confidence": {
+   "calcCI": true,
+   "ciMethod": "PROFILE_LIKELIHOOD",
+   "calcSE": true,
+   "confidenceLevel": 95.0,
+   "ciOutputFormat": "RANGE"
+  },
+  "diagnostics": {
+   "hazardRatio": true,
+   "parSignificanceTest": false,
+   "parCorrelation": false,
+   "parMulticollinearity": false,
+   "logLikelihood": false,
+   "neg2logLikelihood": false,
+   "pseudoR2": false,
+   "aic": true,
+   "likelihoodRatioTest": false,
+   "waldTest": false,
+   "scoreTest": false,
+   "harrellC": false,
+   "alpha": 0.05
+  },
+  "graph": {
+   "plots": [
+    "SCALED_SCHOENFELD_RESIDUALS_VS_TIME_ROW_PLOT",
+    "DEVIANCE_RESIDUALS_VS_HR_PLOT",
+    "DEVIANCE_RESIDUALS_VS_COV_PLOT"
+   ],
+   "labelsVariable": {
+    "enabled": false,
+    "type": "ROW_NUMBERS"
+   },
+   "symbolColorVariable": {
+    "enabled": false,
+    "type": "VARIABLE",
+    "variable": {
+     "col": {
+      "idx": -3
+     }
+    }
+   },
+   "symbolSizeVariable": {
+    "enabled": false,
+    "type": "VARIABLE",
+    "variable": {
+     "col": {
+      "idx": -3
+     }
+    }
+   },
+   "survivalCurves": [],
+   "logMinusLogPlot": []
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  },
+  "model": {
+   "treatUndefinedValuesAs": "MISSING",
+   "tiesMethod": "EFRON",
+   "updateAutoReferenceLevels": true
+  }
+ },
+ "MULTIPLE_LINEAR_REGRESSION": {
+  "modelComparison": {
+   "method": "NO",
+   "alpha": 0.05
+  },
+  "interpolation": {
+   "fromData": true,
+   "fromList": false,
+   "calcCI": false,
+   "pointsList": []
+  },
+  "confidence": {
+   "calcCI": true,
+   "ciMethod": "PROFILE_LIKELIHOOD",
+   "calcSE": true,
+   "confidenceLevel": 95.0,
+   "ciOutputFormat": "RANGE"
+  },
+  "diagnostics": {
+   "parSignificanceTest": true,
+   "parCorrelation": true,
+   "parMulticollinearity": true,
+   "r2": true,
+   "adjR2": false,
+   "multipleR": false,
+   "ss": false,
+   "syx": false,
+   "rmse": false,
+   "aicc": false,
+   "normalityTestDP": true,
+   "normalityTestSW": true,
+   "normalityTestKS": true,
+   "normalityTestAD": true,
+   "alpha": 0.05
+  },
+  "graph": {
+   "plots": [
+    "ACTUAL_VS_PREDICTED",
+    "Y_VS_RESIDUAL"
+   ]
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  },
+  "model": {
+   "regressionType": "LS",
+   "weighting": {
+    "type": "NO_WEIGHTING",
+    "k": 2.0
+   },
+   "updateAutoReferenceLevels": true
+  }
+ },
+ "MULTIPLE_LOGISTIC_REGRESSION": {
+  "modelComparison": {
+   "method": "NO",
+   "alpha": 0.05
+  },
+  "confidence": {
+   "calcCI": true,
+   "ciMethod": "PROFILE_LIKELIHOOD",
+   "calcSE": true,
+   "confidenceLevel": 95.0,
+   "ciOutputFormat": "RANGE"
+  },
+  "diagnostics": {
+   "oddsRatio": true,
+   "parSignificanceTest": false,
+   "parCorrelation": false,
+   "parMulticollinearity": false,
+   "r2MF": false,
+   "r2CS": false,
+   "r2NA": false,
+   "r2TJ": true,
+   "logLikelihood": false,
+   "deviance": false,
+   "aicc": true,
+   "hlTest": true,
+   "likelihoodRatioTest": false,
+   "classificationTable": true,
+   "rowClassification": true,
+   "classificationCutoff": 0.5,
+   "roc": true,
+   "alpha": 0.05
+  },
+  "graph": {
+   "curveBands": {
+    "type": "NONE",
+    "level": 95.0
+   },
+   "plots": [
+    "PREDICTED_VS_OBSERVED",
+    "LOGISTIC_PLOT",
+    "ROC_CURVE_PLOT"
+   ]
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  },
+  "model": {
+   "updateAutoReferenceLevels": true
+  }
+ },
+ "MULTIPLE_TWO_SAMPLE_TESTS": {
+  "test": "MULTIPLE_UNPAIRED_TWO_SAMPLE_EQUAL_SD_TESTS",
+  "multipleComparisons": {
+   "type": "NO_CORRECTION",
+   "statistical": {
+    "test": "HOLM_SIDAK",
+    "report": {
+     "adjustedPValues": true
+    },
+    "options": {
+     "significanceLevel": 0.05
+    }
+   },
+   "fdr": {
+    "test": "BENJAMINI_HOCHBERG",
+    "options": {
+     "discoveryLevel": 1.0
+    }
+   },
+   "noCorrection": {
+    "options": {
+     "significanceLevel": 0.05
+    }
+   }
+  },
+  "report": {
+   "negLog10": false,
+   "negLog2": false
+  },
+  "graph": {
+   "volcanoPlot": true
+  },
+  "options": {
+   "swapDirection": false
+  },
+  "output": {
+   "significantDigitCount": 6,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_FULL",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "MULTI_FACTOR_ANOVA": {
+  "residuals": {
+   "diagnostics": {
+    "normalityTests": false,
+    "heteroscedasticityTests": false
+   },
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false
+   }
+  },
+  "graph": {
+   "primaryFactor": {
+    "varIdx": 0,
+    "varID": {
+     "col": {
+      "idx": 0
+     }
+    }
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "NESTED_T_TEST": {
+  "residuals": {
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false
+   }
+  },
+  "report": {
+   "goodnessOfFit": false
+  },
+  "graph": {
+   "confidenceInterval": false
+  },
+  "options": {
+   "zeroRandomEffect": "DO_NOT_OMIT_FROM_MODEL",
+   "swapDirection": true,
+   "significanceLevel": 0.05
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "NONLINEAR_REGRESSION": {
+  "data": {
+   "handleReplicatesAs": "INDIVIDUAL",
+   "range": {
+    "minX": {
+     "enabled": false,
+     "value": "undefined"
+    },
+    "maxX": {
+     "enabled": false,
+     "value": "undefined"
+    }
+   }
+  },
+  "interpolation": {
+   "enabled": false,
+   "calcCI": false,
+   "confidenceLevel": 95.0,
+   "xOutputFormat": "STACKED"
+  },
+  "method": {
+   "outliers": {
+    "method": "DO_NOT_HANDLE",
+    "q": 1.0,
+    "outputCleanedData": false
+   },
+   "fittingMethod": "LS",
+   "convergence": {
+    "criteriaType": "MEDIUM",
+    "switchToStrictCriteria": true,
+    "maxIterations": 1000
+   },
+   "weighting": {
+    "type": "NO_WEIGHTING",
+    "k": 0.0
+   }
+  },
+  "modelComparison": {
+   "type": "NO_COMPARISON",
+   "method": "STAT_TEST",
+   "alpha": 0.05,
+   "preferUnambiguousFit": true
+  },
+  "confidence": {
+   "calcCI": true,
+   "calcSE": false,
+   "ciMethod": "PROFILE_LIKELIHOOD",
+   "confidenceLevel": 95.0,
+   "ciOutputFormat": "RANGE",
+   "calcCIForAmbiguous": false,
+   "ambiguityTestMethod": "CONDITION_NUMBER"
+  },
+  "diagnostics": {
+   "r2": true,
+   "adjR2": false,
+   "lfv": true,
+   "syx": true,
+   "rmse": false,
+   "aicc": false,
+   "normalityTestDP": false,
+   "normalityTestSW": false,
+   "normalityTestKS": false,
+   "normalityTestAD": false,
+   "runsTest": false,
+   "replicatesTest": false,
+   "homoscedasticityTest": false,
+   "parCovariance": false,
+   "parDependency": false,
+   "parSkewness": false,
+   "alpha": 0.05
+  },
+  "graph": {
+   "curve": {
+    "minX": {
+     "isAuto": true,
+     "value": 0.0
+    },
+    "maxX": {
+     "isAuto": true,
+     "value": 150.0
+    },
+    "pointCount": 1000
+   },
+   "curveBands": {
+    "type": "NONE",
+    "level": 95.0
+   },
+   "plots": []
+  },
+  "summaryTable": {
+   "enabled": false,
+   "parameters": [],
+   "schildPlot": false,
+   "outputFormat": "PARAMETERS_AND_SE",
+   "graph": "BAR_GRAPH_COLUMN_TITLES"
+  },
+  "flagging": {
+   "r2": {
+    "enabled": false,
+    "threshold": "undefined"
+   },
+   "pointCount": {
+    "enabled": false,
+    "threshold": "undefined"
+   },
+   "parDependency": {
+    "enabled": false,
+    "threshold": "undefined"
+   },
+   "normalityTest": {
+    "enabled": false,
+    "threshold": "undefined"
+   },
+   "curveDeviationTest": {
+    "enabled": false,
+    "threshold": "undefined"
+   },
+   "outliersCount": {
+    "enabled": false,
+    "threshold": "undefined"
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "NORMALITY_TESTS": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "testforNormality": true,
+   "testforLognormality": false,
+   "testRelativeLikelihood": false,
+   "tests": {
+    "andersonDarling": true,
+    "dAgostinoPearson": true,
+    "shaproWilks": true,
+    "kolmogorovSmirnov": true
+   }
+  },
+  "graph": {
+   "qqPlot": true
+  },
+  "options": {
+   "significanceLevel": 0.05
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "NORMALIZE": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "calc": {
+   "value_0": {
+    "defineAs": "SMALLEST",
+    "customValue": 0.0,
+    "removeFromResults": false
+   },
+   "value_100": {
+    "defineAs": "LARGEST",
+    "customValue": "undefined",
+    "removeFromResults": false
+   }
+  },
+  "graph": {
+   "create": true
+  },
+  "options": {
+   "reportResultsAs": "PERCENTAGES"
+  }
+ },
+ "ONE_SAMPLE_TESTS": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "experimentalDesign": "ONE_SAMPLE_T_TEST",
+  "calc": {
+   "hypotheticalValue": 0.0,
+   "ciOfDifferenceBetweenMedians": true,
+   "usePrattMethod": true
+  },
+  "options": {
+   "significanceLevel": 0.05
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "ONE_WAY_ANOVA": {
+  "experimentalDesign": "ORDINARY_ANOVA",
+  "calc": {
+   "modelComparisonAIC": false
+  },
+  "repeatedMeasures": {
+   "method": "OPTIONAL",
+   "assumeSphericity": false,
+   "removeNonPositiveRandomEffects": true,
+   "useInitialValuesFromGLM": true
+  },
+  "postTests": {
+   "type": "PAIRWISE_TESTS",
+   "pairwiseTests": {
+    "pairwiseDesign": {
+     "type": "ALL_VS_ALL",
+     "controlID": {
+      "col": {
+       "idx": 0
+      }
+     },
+     "selectedPairIDList": []
+    },
+    "multipleComparisons": {
+     "type": "STATISTICAL",
+     "statistical": {
+      "test": "TUKEY",
+      "report": {
+       "adjustedPValues": true
+      },
+      "options": {
+       "significanceLevel": 0.05
+      }
+     },
+     "fdr": {
+      "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+      "options": {
+       "discoveryLevel": 0.05
+      }
+     },
+     "noCorrection": {
+      "options": {
+       "significanceLevel": 0.05
+      }
+     }
+    },
+    "graph": {
+     "differences": false,
+     "confidenceIntervals": false
+    },
+    "options": {
+     "swapDirection": false
+    }
+   }
+  },
+  "residuals": {
+   "diagnostics": {
+    "normalityTests": false,
+    "heteroscedasticityTests": true
+   },
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false,
+    "heatMapPlot": false
+   }
+  },
+  "report": {
+   "descriptiveStatistics": false,
+   "goodnessOfFit": false,
+   "effectSizes": false
+  },
+  "graph": {
+   "ranks": false
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "ONE_WAY_NESTED_ANOVA": {
+  "postTests": {
+   "type": "NO_TESTS",
+   "pairwiseTests": {
+    "pairwiseDesign": {
+     "type": "NO_TESTS",
+     "controlID": {
+      "col": {
+       "idx": 0
+      }
+     },
+     "selectedPairIDList": []
+    },
+    "multipleComparisons": {
+     "type": "STATISTICAL",
+     "statistical": {
+      "test": "NO_TEST",
+      "report": {
+       "adjustedPValues": true
+      },
+      "options": {
+       "significanceLevel": 0.05
+      }
+     },
+     "fdr": {
+      "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+      "options": {
+       "discoveryLevel": 0.05
+      }
+     },
+     "noCorrection": {
+      "options": {
+       "significanceLevel": 0.05
+      }
+     }
+    },
+    "graph": {
+     "confidenceIntervals": false
+    },
+    "options": {
+     "swapDirection": false
+    }
+   }
+  },
+  "residuals": {
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false
+   }
+  },
+  "report": {
+   "goodnessOfFit": false
+  },
+  "graph": {
+   "confidenceIntervals": false
+  },
+  "options": {
+   "zeroRandomEffect": "DO_NOT_OMIT_FROM_MODEL"
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "PCA": {
+  "calc": {
+   "transform": "STANDARDIZE_DATA",
+   "method": "PARALLEL_ANALYSIS",
+   "eigenvalueThreshold": 1.0,
+   "componentCount": 2,
+   "explainedVariance": 75.0,
+   "parallelAnalysis": {
+    "percentileLevel": 95.0,
+    "simulationCount": 1000,
+    "randomSeed": 433350,
+    "randomSeedType": "AUTO"
+   },
+   "regression": {
+    "run": false,
+    "dependentVariable": {
+     "col": {
+      "idx": -1
+     }
+    }
+   }
+  },
+  "report": {
+   "transformedData": false,
+   "eigenvectors": false,
+   "variablesContributionMatrix": false,
+   "variablesComponentsCorrelationMatrix": false,
+   "casesContributionMatrix": false,
+   "variablesCorrelationMatrix": false
+  },
+  "graph": {
+   "scorePlot": true,
+   "loadingPlot": true,
+   "biPlot": true,
+   "screePlot": false,
+   "varianceProportionPlot": true,
+   "variables": {
+    "labels": {
+     "use": false,
+     "type": "LABEL_TYPE_ROW_NUMBERS",
+     "variable": {
+      "col": {
+       "idx": -1
+      }
+     }
+    },
+    "symbolColor": {
+     "use": false,
+     "variable": {
+      "col": {
+       "idx": -1
+      }
+     }
+    },
+    "symbolSize": {
+     "use": false,
+     "variable": {
+      "col": {
+       "idx": -1
+      }
+     }
+    },
+    "connectingLine": {
+     "use": false,
+     "variable": {
+      "col": {
+       "idx": -1
+      }
+     }
+    }
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "PRUNE_ROWS": {
+  "calc": {
+   "pruneByRange": true,
+   "xRangeToKeep": {
+    "from": 0.0,
+    "to": 24.0
+   },
+   "averageType": "EVERY_OTHER_ROW",
+   "n": 4,
+   "averageOnly": {
+    "greaterThan": false,
+    "xThreshold": 0.0
+   }
+  },
+  "graph": {
+   "create": true
+  }
+ },
+ "REMOVE_BASELINE": {
+  "data": {
+   "baselineType": "BASELINE_COLUMN",
+   "columnBaseline": {
+    "type": "EVERY_OTHER_COLUMN_2_4_6",
+    "id": {
+     "col": {
+      "idx": -1
+     }
+    },
+    "usePredictedValuesFromLinearRegression": false
+   },
+   "rowBaseline": {
+    "type": "FIRST_ROW",
+    "firstRowsMeanCount": 3,
+    "lastRowsMeanCount": 3
+   },
+   "treatSubcolumnsAs": "MEANS"
+  },
+  "calc": {
+   "expression": "RATIO"
+  },
+  "graph": {
+   "create": false
+  },
+  "options": {
+   "removeBaselineFromResults": true,
+   "labelingColumnResults": "EXPRESSION_COLUMN_SHORTCUTS"
+  }
+ },
+ "ROC_CURVE": {
+  "options": {
+   "reportResultsAs": "PERCENTAGE",
+   "confidenceMethod": "WILSON_BROWN",
+   "confidenceLevel": 95.0
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "ROW_STATISTICS": {
+  "data": {
+   "scope": "TABLE"
+  },
+  "calc": {
+   "statistics": "MEAN_WITH_SD"
+  },
+  "graph": {
+   "create": false
+  },
+  "options": {
+   "confidenceLevel": 95.0,
+   "percentileLevel": 90.0
+  }
+ },
+ "SELECT_TRANSFORM": {
+  "rowFilters": {
+   "range": {
+    "from": -1,
+    "to": -1
+   },
+   "variableValue": [],
+   "variableVariable": []
+  }
+ },
+ "SIMPLE_LINEAR_REGRESSION": {
+  "data": {
+   "handleReplicatesAs": "AVERAGE"
+  },
+  "model": {
+   "constrainLineToFixedPoint": false,
+   "fixedPoint": {
+    "x": 0.0,
+    "y": 0.0
+   }
+  },
+  "calc": {
+   "xCI": {
+    "enabled": true,
+    "y": 0.0
+   },
+   "yCI": {
+    "enabled": true,
+    "x": 0.0
+   },
+   "interpolation": false,
+   "modelComparisonTest": false,
+   "departureFromLinearityTest": false
+  },
+  "graph": {
+   "residualPlot": false,
+   "regressionLineRange": {
+    "minX": {
+     "isAuto": true,
+     "value": 17.9
+    },
+    "maxX": {
+     "isAuto": true,
+     "value": 24.4
+    }
+   },
+   "regressionLineBands": {
+    "type": "NONE",
+    "level": 95.0
+   }
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "SIMPLE_LOGISTIC_REGRESSION": {
+  "calc": {
+   "rowClassification": true,
+   "rocCurve": true,
+   "r2CS": true,
+   "r2TJ": true,
+   "deviance": true,
+   "likelihoodRatioTest": true
+  },
+  "graph": {
+   "regressionLineRange": {
+    "minX": {
+     "isAuto": true,
+     "value": 0.0
+    },
+    "maxX": {
+     "isAuto": true,
+     "value": 6.0
+    }
+   },
+   "regressionLineConfidenceBands": false
+  },
+  "options": {
+   "confidenceLevel": 95.0
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "SMOOTH_CURVE": {
+  "calc": {
+   "type": "CURVE",
+   "integralY0": 0.0,
+   "smoothing": {
+    "enabled": true,
+    "neighborCount": 4,
+    "polynomialOrder": 2
+   }
+  }
+ },
+ "SURVIVAL": {
+  "data": {
+   "eventCode": 1,
+   "censorCode": 0,
+   "eventCodeStr": "1",
+   "censorCodeStr": "0",
+   "treatUndefinedValuesAs": "MISSING"
+  },
+  "postTests": {
+   "type": "NO_TESTS",
+   "pairwiseTests": {
+    "pairwiseDesign": {
+     "type": "NO_TESTS",
+     "controlID": null,
+     "selectedPairIDList": []
+    },
+    "multipleComparisons": {
+     "type": "STATISTICAL",
+     "statistical": {
+      "test": "TUKEY",
+      "report": {
+       "adjustedPValues": true
+      },
+      "options": {
+       "significanceLevel": 0.05
+      }
+     },
+     "fdr": {
+      "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+      "options": {
+       "discoveryLevel": 1.0
+      }
+     },
+     "noCorrection": {
+      "options": {
+       "significanceLevel": 0.05
+      }
+     }
+    }
+   }
+  },
+  "calc": {
+   "twoGroupsLogrankTest": true,
+   "twoGroupsGehanBreslowWilcoxonTest": true,
+   "logrankTest": true,
+   "logrankTestForTrend": true,
+   "gehanBreslowWilcoxonTest": false,
+   "logrankTestMethod": "RECOMMENDED",
+   "logrankTestForTrendMethod": "RECOMMENDED",
+   "tabulate": "EVENT",
+   "probabilityAs": "PERCENTAGE",
+   "ciMethod": "ASYMMETRICAL",
+   "ciLevel": 95.0
+  },
+  "graph": {
+   "showCensoredSubjects": true,
+   "errorBars": "NONE",
+   "showNumberAtRiskTable": false
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "THREE_WAY_ANOVA": {
+  "experimentalDesign": "ORDINARY_ANOVA",
+  "factorNames": {
+   "colABCDFactor": "(AB vs CD)",
+   "colACBDFactor": "(AC vs BD)",
+   "rowFactor": "Row factor",
+   "matchedFactor": "Subject",
+   "colABCombinedFactor": "",
+   "colCDCombinedFactor": "",
+   "colACCombinedFactor": "",
+   "colBDCombinedFactor": ""
+  },
+  "repeatedMeasures": {
+   "assumeSphericity": false,
+   "method": "OPTIONAL",
+   "removeNonPositiveRandomEffects": true,
+   "useInitialValuesFromGLM": true
+  },
+  "postTests": {
+   "type": "NO_TESTS",
+   "pairwiseTests": {
+    "meansDesignType": "NO_TESTS",
+    "pairwiseDesign": {
+     "type": "NO_TESTS",
+     "controlID": {
+      "row": {
+       "idx": 0
+      }
+     }
+    },
+    "multipleComparisons": {
+     "type": "STATISTICAL",
+     "statistical": {
+      "test": "NO_TEST",
+      "report": {
+       "adjustedPValues": true
+      },
+      "options": {
+       "significanceLevel": 0.05
+      }
+     },
+     "fdr": {
+      "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+      "options": {
+       "discoveryLevel": 0.05
+      }
+     },
+     "noCorrection": {
+      "options": {
+       "significanceLevel": 0.05
+      }
+     }
+    },
+    "graph": {
+     "confidenceIntervals": false
+    },
+    "options": {
+     "swapDirection": false
+    }
+   }
+  },
+  "residuals": {
+   "diagnostics": {
+    "normalityTests": false,
+    "heteroscedasticityTests": false
+   },
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false
+   }
+  },
+  "report": {
+   "means": false,
+   "goodnessOfFit": false,
+   "consolidatedData": "DO_NOT_CONSOLIDATE",
+   "effectSizes": false
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "TRANSPOSE": {
+  "calc": {
+   "transposedTable": {
+    "type": "XY_TABLE",
+    "rowTitles": "NONE",
+    "columnTitles": "X_VALUES_OF_ORIGINAL_TABLE",
+    "xValues": "COLUMN_TITLES_OF_ORIGINAL_TABLE"
+   }
+  },
+  "graph": {
+   "create": true
+  }
+ },
+ "TRNSFORM": {
+  "data": {
+   "handleReplicatesAs": "INDIVIDUAL"
+  },
+  "calc": {
+   "transformType": "STANDARD",
+   "standardFunction": {
+    "interchangeXY": false,
+    "xTransform": {
+     "enabled": true,
+     "function": "LOG10(X)",
+     "k": "undefined"
+    },
+    "yTransform": {
+     "enabled": false,
+     "function": "Y*K",
+     "kSameForAll": true,
+     "k": "undefined",
+     "kList": []
+    },
+    "handleSDAs": "DELETE"
+   },
+   "specialFunction": {
+    "function": "SCATCHARD",
+    "vMax": "undefined",
+    "xValuesAs": "LOG_CONCENTRATION"
+   },
+   "userDefinedXFunction": {
+    "name": "",
+    "definition": "",
+    "parameters": {}
+   },
+   "userDefinedYFunction": {
+    "name": "",
+    "definition": "",
+    "parameters": {}
+   }
+  },
+  "graph": {
+   "create": true
+  }
+ },
+ "TWO_WAY_ANOVA": {
+  "experimentalDesign": "ORDINARY_ANOVA",
+  "factorNames": {
+   "colFactor": "Column Factor",
+   "rowFactor": "Row Factor",
+   "matchedFactor": "Subject"
+  },
+  "repeatedMeasures": {
+   "method": "OPTIONAL",
+   "assumeSphericity": false,
+   "removeNonPositiveRandomEffects": true,
+   "useInitialValuesFromGLM": true
+  },
+  "postTests": {
+   "type": "PAIRWISE_TESTS",
+   "pairwiseTests": {
+    "meansDesignType": "COMPARE_COLUMNS",
+    "pairwiseDesign": {
+     "type": "ALL_VS_ALL",
+     "controlID": {
+      "col": {
+       "idx": 0
+      }
+     },
+     "selectedPairIDList": []
+    },
+    "multipleComparisons": {
+     "type": "STATISTICAL",
+     "statistical": {
+      "test": "BONFERRONI_SIDAK",
+      "report": {
+       "adjustedPValues": true
+      },
+      "options": {
+       "significanceLevel": 0.05
+      }
+     },
+     "fdr": {
+      "test": "BENJAMINI_KRIEGER_YEKUTIELI",
+      "options": {
+       "discoveryLevel": 0.05
+      }
+     },
+     "noCorrection": {
+      "options": {
+       "significanceLevel": 0.05
+      }
+     }
+    },
+    "graph": {
+     "confidenceIntervals": false
+    },
+    "options": {
+     "swapDirection": false
+    }
+   }
+  },
+  "residuals": {
+   "diagnostics": {
+    "normalityTests": false,
+    "heteroscedasticityTests": false
+   },
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false
+   }
+  },
+  "report": {
+   "means": false,
+   "goodnessOfFit": false,
+   "effectSizes": false,
+   "narrativeResults": false
+  },
+  "options": {
+   "includeInteractionTerm": true
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ },
+ "T_TESTS_AND_NONPARAMETRIC": {
+  "experimentalDesign": "UNPAIRED_T_TEST",
+  "calc": {
+   "modelComparisonAIC": false,
+   "ciOfDifferenceBetweenMedians": false,
+   "ciOfMedianOfDifferences": false,
+   "usePrattMethod": false
+  },
+  "residuals": {
+   "diagnostics": {
+    "normalityTests": false
+   },
+   "graphs": {
+    "residualsPlot": false,
+    "homoscedasticityPlot": false,
+    "qqPlot": false,
+    "heatMapPlot": false
+   }
+  },
+  "report": {
+   "descriptiveStatistics": false,
+   "effectSizes": false
+  },
+  "graph": {
+   "differences": false,
+   "correlation": false,
+   "ranks": false,
+   "confidenceInterval": true
+  },
+  "options": {
+   "swapDirection": true,
+   "pValueTailType": "P_VALUE_TWO_TAILED",
+   "significanceLevel": 0.05
+  },
+  "output": {
+   "significantDigitCount": 4,
+   "pValueStyle": {
+    "type": "P_VALUE_STYLE_GP",
+    "decimalDigitCount": 6
+   }
+  }
+ }
+}

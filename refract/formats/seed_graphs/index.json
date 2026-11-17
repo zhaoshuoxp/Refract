@@ -1,0 +1,82 @@
+{
+ "column": {
+  "file": "column.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "row_fen": 0,
+  "x_fen": null
+ },
+ "grouped": {
+  "file": "grouped.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null
+ },
+ "xy": {
+  "file": "xy.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 14,
+  "x_fen": 15
+ },
+ "survival": {
+  "file": "survival.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "row_fen": null,
+  "x_fen": 30
+ },
+ "parts_of_whole": {
+  "file": "parts_of_whole.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   1
+  ],
+  "row_fen": 0,
+  "x_fen": null
+ }
+}

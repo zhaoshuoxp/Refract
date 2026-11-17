@@ -1,0 +1,596 @@
+{
+ "col_floating": {
+  "file": "col_floating.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "row_fen": 0,
+  "x_fen": null,
+  "kind": "column"
+ },
+ "col_floating_h": {
+  "file": "col_floating_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   23,
+   24,
+   25,
+   26,
+   27,
+   28
+  ],
+  "row_fen": 22,
+  "x_fen": null,
+  "kind": "column"
+ },
+ "cont_bars_h": {
+  "file": "cont_bars_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "row_fen": 30,
+  "x_fen": null,
+  "kind": "contingency"
+ },
+ "cont_bars_sep": {
+  "file": "cont_bars_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "row_fen": 30,
+  "x_fen": null,
+  "kind": "contingency"
+ },
+ "cont_stacked": {
+  "file": "cont_stacked.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "row_fen": 30,
+  "x_fen": null,
+  "kind": "contingency"
+ },
+ "cont_stacked_h": {
+  "file": "cont_stacked_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "row_fen": 8,
+  "x_fen": null,
+  "kind": "contingency"
+ },
+ "grp_bars_h": {
+  "file": "grp_bars_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_bars_points_sep": {
+  "file": "grp_bars_points_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_bars_sep": {
+  "file": "grp_bars_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_bars_sep_h": {
+  "file": "grp_bars_sep_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 15,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_box_h": {
+  "file": "grp_box_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 15,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_box_sep": {
+  "file": "grp_box_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_floating": {
+  "file": "grp_floating.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_heat_viridis": {
+  "file": "grp_heat_viridis.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "row_fen": 0,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_means_sep": {
+  "file": "grp_means_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_rep_lines": {
+  "file": "grp_rep_lines.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_scatter_sep": {
+  "file": "grp_scatter_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_stacked": {
+  "file": "grp_stacked.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_stacked_h": {
+  "file": "grp_stacked_h.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 15,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "grp_violin_sep": {
+  "file": "grp_violin_sep.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   8,
+   9,
+   10,
+   11,
+   12,
+   13
+  ],
+  "row_fen": 7,
+  "x_fen": null,
+  "kind": "grouped"
+ },
+ "nest_box": {
+  "file": "nest_box.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ],
+  "row_fen": null,
+  "x_fen": null,
+  "kind": "nested"
+ },
+ "nest_floating": {
+  "file": "nest_floating.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ],
+  "row_fen": null,
+  "x_fen": null,
+  "kind": "nested"
+ },
+ "nest_scatter": {
+  "file": "nest_scatter.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42
+  ],
+  "row_fen": null,
+  "x_fen": null,
+  "kind": "nested"
+ },
+ "nest_scatter_bar": {
+  "file": "nest_scatter_bar.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42
+  ],
+  "row_fen": null,
+  "x_fen": null,
+  "kind": "nested"
+ },
+ "nest_violin": {
+  "file": "nest_violin.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ],
+  "row_fen": null,
+  "x_fen": null,
+  "kind": "nested"
+ },
+ "surv_inverted_points": {
+  "file": "surv_inverted_points.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   59,
+   60,
+   61,
+   62,
+   63,
+   64
+  ],
+  "row_fen": null,
+  "x_fen": 58,
+  "kind": "survival"
+ },
+ "surv_inverted_ticks": {
+  "file": "surv_inverted_ticks.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42
+  ],
+  "row_fen": null,
+  "x_fen": 36,
+  "kind": "survival"
+ },
+ "surv_points": {
+  "file": "surv_points.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   52,
+   53,
+   54,
+   55,
+   56,
+   57
+  ],
+  "row_fen": null,
+  "x_fen": 51,
+  "kind": "survival"
+ },
+ "surv_steps_symbols": {
+  "file": "surv_steps_symbols.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   44,
+   45,
+   46,
+   47,
+   48,
+   49
+  ],
+  "row_fen": null,
+  "x_fen": 43,
+  "kind": "survival"
+ },
+ "xy_bars": {
+  "file": "xy_bars.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 14,
+  "x_fen": 15,
+  "kind": "xy"
+ },
+ "xy_rep_lines": {
+  "file": "xy_rep_lines.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 14,
+  "x_fen": 15,
+  "kind": "xy"
+ },
+ "xy_replicates": {
+  "file": "xy_replicates.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 14,
+  "x_fen": 15,
+  "kind": "xy"
+ },
+ "xy_replicates_line": {
+  "file": "xy_replicates_line.pcff",
+  "sheet": {
+   "@class": "FENGraphSheet",
+   "$id": "sheets/graph_sheet.schema.json"
+  },
+  "y_fens": [
+   16,
+   17,
+   18,
+   19,
+   20,
+   21
+  ],
+  "row_fen": 14,
+  "x_fen": 15,
+  "kind": "xy"
+ }
+}
